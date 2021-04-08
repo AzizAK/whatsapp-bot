@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Whatsapp Bot</title>
+    <link rel="stylesheet" href="./bootstrap5/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="greet">أهلين</h1>
+      <p>
+        ستفتح معك نافذة اخرى لمتفصح كروم يجب عليك تسجيل دخولك للواتساب من خلالها
+        قبل البدء في العمل
+      </p>
+      <p>
+        فم بارفاق ملف اكسل ادناه، يحتوي العامود الاول على ارقام الجوال هكذا
+        (555847598) والعامود الثاني نص الرسالة
+      </p>
+
+      <!-- <button id="start">أفتح الواتساب</button> -->
+
+      <div class="custom-file">
+        <label class="custom-file-label" for="customFile">ملف الاكسل</label>
+        <input type="file" class="custom-file-input" id="file-selector" />
+      </div>
+      <br />
+      <button class="btn btn-primary" id="message">إبدأ بإرسال الرسائل</button>
+      <br />
+      <span>الحالة: </span>
+      <span id="status">في الإنتظار</span>
+      <br />
+      <span id="workingOn"></span>
+      <br />
+      <div class="row">
+        <div class="col-md-6">
+          <table id="successTable" class="table table-striped">
+            <thead>
+              <tr>
+                <th>العمليات الناجحة</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <table id="errorsTable" class="table table-striped">
+            <thead>
+              <tr>
+                <th>العمليات الفاشلة</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./app.js"></script>
+    <script src="./bootstrap5/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
